@@ -2,8 +2,11 @@ name: 'Gomplate'
 description: ''
 inputs:
   file:
+    default: ''
   out:
+    default: ''
   context:
+    default: ''
 runs:
   using: 'docker'
   image: 'docker://docker.io/hairyhenderson/gomplate:latest@sha256:5f447d89c42af9b917070e9def00b7e54b8c8d2ce0c84cab89f1c3143d32190d'
