@@ -1,0 +1,25 @@
+name: 'Gomplate'
+description: ''
+inputs:
+  input:
+    description: 'Where to look for templates.'
+    required: false
+    default: '.'
+  output:
+    description: 'Directory to store the processed templates.'
+    required: false
+    default: '.'
+  context:
+    description: 'Load datasource context.'
+    required: false
+    default: ''
+runs:
+  using: 'docker'
+  image: 'docker.io/hairyhenderson/gomplate:latest@sha256:5f447d89c42af9b917070e9def00b7e54b8c8d2ce0c84cab89f1c3143d32190d'
+  args:
+    - '--input-dir'
+    - '${{ inputs.input }}'
+    - '--output-dir'
+    - '${{ inputs.output }}'
+    - '--context'
+    - '${{ inputs.context }}'
