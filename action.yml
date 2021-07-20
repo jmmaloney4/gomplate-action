@@ -1,17 +1,9 @@
 name: 'Gomplate'
 description: ''
 inputs:
-  input:
-    description: 'Where to look for templates.'
-    required: false
-    default: '.'
-  output:
-    description: 'Directory to store the processed templates.'
-    required: false
-    default: '.'
-  context:
-    description: 'Load datasource context.'
-    required: false
+  args:
+    description: 'Arguments passed to gomplate.'
+    required: true
     default: ''
 runs:
   using: 'docker'
