@@ -1,12 +1,16 @@
 name: 'Gomplate'
 description: ''
 inputs:
-  args:
-    description: 'Arguments passed to gomplate.'
-    required: true
-    default: ''
+  file:
+  out:
+  context:
 runs:
   using: 'docker'
   image: 'docker://docker.io/hairyhenderson/gomplate:latest@sha256:5f447d89c42af9b917070e9def00b7e54b8c8d2ce0c84cab89f1c3143d32190d'
   args:
-    - '${{ inputs.args }}'
+    - '--file'
+    - '${{ inputs.file }}'
+    - '--out'
+    - '${{ inputs.out }}'
+    - '--context'
+    - '${{ inputs.context }}'
