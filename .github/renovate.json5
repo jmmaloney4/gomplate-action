@@ -15,7 +15,7 @@
         "^action\.yml$"
       ],
       matchStrings: [
-        "image:\s*\'docker:\/\/(?<depName>.*?):(?<currentValue>.*?)@(?<currentDigest>sha256:[a-f0-9]+)\'"
+        "docker:\/\/(?<depName>.*?):(?<currentValue>.*?)@(?<currentDigest>sha256:[a-f0-9]+)"
       ],
       datasourceTemplate: "docker"
     }
