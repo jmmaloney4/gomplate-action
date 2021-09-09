@@ -9,7 +9,7 @@ inputs:
     default: ''
 runs:
   using: 'docker'
-  image: 'docker://docker.io/hairyhenderson/gomplate:v3.7.0@sha256:5f447d89c42af9b917070e9def00b7e54b8c8d2ce0c84cab89f1c3143d32190d'
+  image: 'docker://docker.io/hairyhenderson/gomplate:v3.9.0@sha256:a877a2068f2a1b120557e5cf05d2c8ea92a2267e12a1ed87d899e3771c44bbc0'
   args:
     - '--file'
     - '${{ inputs.file }}'
