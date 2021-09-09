@@ -8,5 +8,16 @@
   prConcurrentLimit: 0,
   prHourlyLimit: 0,
   assignees: ["jmmaloney4"],
-  requiredStatusChecks: null
+  requiredStatusChecks: null,
+  regexManagers: [
+    {
+      fileMatch: [
+        "action.yml$"
+      ],
+      matchStrings: [
+        "image:\s*\'docker:\/\/(?<depName>.*?):(?<currentValue>.*?)@(?<currentDigest>sha256:[a-f0-9]+)\'"
+      ],
+      datasourceTemplate: "docker"
+    }
+  ]
 }
