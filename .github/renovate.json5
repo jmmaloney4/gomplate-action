@@ -12,7 +12,7 @@
   regexManagers: [
     {
       fileMatch: [
-        "action.yml$"
+        "action.yml"
       ],
       matchStrings: [
         "image:\s*\'docker:\/\/(?<depName>.*?):(?<currentValue>.*?)@(?<currentDigest>sha256:[a-f0-9]+)\'"
